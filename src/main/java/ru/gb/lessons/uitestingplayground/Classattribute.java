@@ -18,8 +18,9 @@ public class Classattribute {
 
         webDriver.manage().window().setSize(new Dimension(1500, 720));
 
-        //Не понятно как работает такой xpath по части атрибута и как кликнуть на всплывающее окно
-        //webDriver.findElement(By.xpath("//button[contains(concat(' ', normalize-space(@class), ' '), ' btn-primary ')]")).click();
+        webDriver.findElement(By.xpath("//button[contains(@class, 'btn-primary')]")).click();
+
+        webDriver.switchTo().alert().accept();
 
         Thread.sleep(5000);
 

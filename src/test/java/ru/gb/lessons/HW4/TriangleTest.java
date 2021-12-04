@@ -1,10 +1,11 @@
-package ru.gb.lessons;
+package ru.gb.lessons.HW4;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import ru.gb.lessons.Triangle;
 
 import java.util.stream.Stream;
 
