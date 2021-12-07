@@ -56,7 +56,20 @@ public class TriangleTest {
     @ParameterizedTest(name = "Рассчитать периметр: для {0} периметр = {1}")
     @MethodSource("triangleForPerimeter")
     void trianglePerimeterTest(Triangle triangle, int expectedResult) {
-        int actualResult = triangle.calculatePerimeter();
+        double actualResult = triangle.calculatePerimeter();
+        assertEquals(expectedResult, actualResult);
+    }
+
+    public static Stream<Arguments> triangleForArea() {
+                return Stream.of(Arguments.of(new Triangle(3, 4, 5), 6),
+                Arguments.of(new Triangle(7, 8, 9), 26.832815729997478),
+                Arguments.of(new Triangle(10, 12, 14), 58.787753826796276));
+    }
+
+    @ParameterizedTest(name = "Рассчитать площадь треугольника: для {0} площадь = {1}")
+    @MethodSource("triangleForArea")
+    void triangleAreaTest(Triangle triangle, double expectedResult) {
+        double actualResult = triangle.calculateArea();
         assertEquals(expectedResult, actualResult);
     }
 

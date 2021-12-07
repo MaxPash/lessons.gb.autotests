@@ -8,14 +8,35 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Triangle {
-    private int a;
-    private int b;
-    private int c;
+    private double a;
+    private double b;
+    private double c;
+    private double p;
 
-    public int calculatePerimeter() {
+    public Triangle(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public double calculatePerimeter() {
         checkSidesArePositive();
         checkValid();
         return a + b + c;
+    }
+
+    public double calculateHalfPerimeter() {
+        checkSidesArePositive();
+        checkValid();
+        return (a + b + c) / 2;
+    }
+
+    public double calculateArea() {
+        checkSidesArePositive();
+        checkValid();
+        double p;
+        p = calculateHalfPerimeter();
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
     private void checkSidesArePositive() {
@@ -25,9 +46,10 @@ public class Triangle {
     }
 
     private void checkValid() {
-        long max = Math.max(Math.max(a, b), c);
+        double max = Math.max(Math.max(a, b), c);
         if (max >= (a + b + c - max)) {
             throw new IllegalArgumentException("The any two sides must be greater than third side");
         }
     }
+
 }
