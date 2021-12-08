@@ -18,7 +18,7 @@ public class TriangleTest {
     @DisplayName("Тест ошибки треугольник с отрицательной стороной Junit")
     void catchExceptionPositiveSidesByJunitTest() {
         IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> new Triangle(-1, 1, 50)
-                .calculatePerimeter());
+                .calculateArea());
         assertEquals("The sides must be positive", illegalArgumentException.getMessage());
     }
 
@@ -26,14 +26,14 @@ public class TriangleTest {
     @DisplayName("Тест ошибки треугольника с невалидными сторонами Junit")
     void catchExceptionCorrectSidesValuesByJunitTest() {
         IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class, () -> new Triangle(1, 1, 25)
-                .calculatePerimeter());
+                .calculateArea());
         assertEquals("The any two sides must be greater than third side", illegalArgumentException.getMessage());
     }
 
     @Test
     @DisplayName("Тест ошибки треугольника с невалидными сторонами AssertJ")
     void catchExceptionCorrectSidesValuesByAssertJTest() {
-        assertThatThrownBy(() -> new Triangle(1, 1, 25).calculatePerimeter())
+        assertThatThrownBy(() -> new Triangle(1, 1, 25).calculateArea())
                 .hasMessage("The any two sides must be greater than third side")
                 .isInstanceOf(IllegalArgumentException.class);
     }
@@ -41,7 +41,7 @@ public class TriangleTest {
     @Test
     @DisplayName("Тест ошибки треугольник с отрицательной стороной AssertJ")
     void catchExceptionPositiveSidesByAssertJTest() {
-        assertThatThrownBy(() -> new Triangle(-1, 1, 1).calculatePerimeter())
+        assertThatThrownBy(() -> new Triangle(-1, 1, 1).calculateArea())
                 .hasMessage("The sides must be positive")
                 .isInstanceOf(IllegalArgumentException.class);
     }
