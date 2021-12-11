@@ -1,4 +1,4 @@
-package ru.gb.lessons.HW6.PageObject;
+package ru.gb.lessons.HW6PageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

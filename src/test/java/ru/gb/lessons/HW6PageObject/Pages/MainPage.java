@@ -1,9 +1,9 @@
-package ru.gb.lessons.HW6.PageObject.Pages;
+package ru.gb.lessons.HW6PageObject.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import ru.gb.lessons.HW6.PageObject.BasicView;
+import ru.gb.lessons.HW6PageObject.BasicView;
 
 public class MainPage extends BasicView {
     
