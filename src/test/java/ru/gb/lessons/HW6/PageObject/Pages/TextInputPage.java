@@ -1,13 +1,14 @@
-package ru.gb.lessons.HW6.PageObject;
+package ru.gb.lessons.HW6.PageObject.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.gb.lessons.HW6.PageObject.BasicView;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TextInputPage extends BasicView{
+public class TextInputPage extends BasicView {
     public TextInputPage(WebDriver webDriver) {
         super(webDriver);
     }

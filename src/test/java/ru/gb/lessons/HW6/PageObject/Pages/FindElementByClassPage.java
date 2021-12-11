@@ -1,12 +1,13 @@
-package ru.gb.lessons.HW6.PageObject;
+package ru.gb.lessons.HW6.PageObject.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.gb.lessons.HW6.PageObject.BasicView;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FindElementByClassPage extends BasicView{
+public class FindElementByClassPage extends BasicView {
 
     @FindBy(xpath = "//button[contains(@class, 'btn-primary')]")
     private WebElement StartTestButton;

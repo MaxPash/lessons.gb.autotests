@@ -1,10 +1,11 @@
-package ru.gb.lessons.HW6.PageObject;
+package ru.gb.lessons.HW6.PageObject.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.gb.lessons.HW6.PageObject.BasicView;
 
-public class MainPage extends BasicView{
+public class MainPage extends BasicView {
     
     @FindBy (xpath = "//a[text()='Load Delay']")
     WebElement ServerDelayButton;

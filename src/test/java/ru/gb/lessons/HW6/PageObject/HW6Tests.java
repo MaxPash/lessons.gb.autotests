@@ -3,6 +3,7 @@ package ru.gb.lessons.HW6.PageObject;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import ru.gb.lessons.HW5.BasicTest;
+import ru.gb.lessons.HW6.PageObject.Pages.*;
 
 public class HW6Tests extends BasicTest {
 
