@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LoadDelays extends BasicTest{
+public class ServerDelay extends BasicTest{
     @Test
     void LoadDelaysTest() {
 

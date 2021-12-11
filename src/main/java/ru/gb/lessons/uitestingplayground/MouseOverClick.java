@@ -5,22 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 
-
 import java.util.concurrent.TimeUnit;
 
-public class TextInput {
+public class MouseOverClick {
     public static void main(String[] args) throws InterruptedException {
         WebDriver webDriver = WebDriverManager.chromedriver().create();
 
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-        webDriver.manage().window().setSize(new Dimension(1500, 900));
+        webDriver.get("http://uitestingplayground.com/mouseover");
 
-        webDriver.get("http://uitestingplayground.com/textinput/");
+        webDriver.manage().window().setSize(new Dimension(1500, 720));
 
-        webDriver.findElement(By.xpath("//input[@id='newButtonName']")).sendKeys("MyButton");
-
-        webDriver.findElement(By.xpath("//button[@id='updatingButton']")).click();
+        webDriver.findElement(By.xpath("//a[text()='Click me']")).click();
+        webDriver.findElement(By.xpath("//a[text()='Click me']")).click();
 
         Thread.sleep(5000);
     }

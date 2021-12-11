@@ -2,7 +2,6 @@ package ru.gb.lessons.HW5;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FindElementByClass extends BasicTest {

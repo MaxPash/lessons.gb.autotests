@@ -1,4 +1,4 @@
-package ru.gb.lessons.uitestingplayground;
+package ru.gb.lessons.uitestingplayground.NotAssertableTests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
