@@ -1,5 +1,6 @@
 package ru.gb.lessons.HW6PageObject.Pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,7 @@ public class FindElementByClassPage extends BasicView {
         return new FindElementByClassPage(webDriver);
     }
 
+    @Step("Проверить что текст Alert окна: Primary button pressed")
     public FindElementByClassPage checkAlertText(){
         assertThat(webDriver.switchTo().alert().getText()).isEqualTo("Primary button pressed");
         return new FindElementByClassPage(webDriver);

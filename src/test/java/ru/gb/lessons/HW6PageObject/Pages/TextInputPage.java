@@ -1,5 +1,6 @@
 package ru.gb.lessons.HW6PageObject.Pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,12 +24,12 @@ public class TextInputPage extends BasicView {
         textInput.sendKeys(text);
         return new TextInputPage(webDriver);
     }
-
+    @Step("Подтвеждаем ввод текста, нажатием на кнопку")
     public TextInputPage submitTextClick(){
         updateButtonTextButton.click();
         return new TextInputPage(webDriver);
     }
-
+    @Step("Проверяем что текст кнопки изменился на {0}")
     public TextInputPage checkNewText(String text){
         assertThat(webDriver.findElement(By.xpath("//button[@id='updatingButton']")).getText()).isEqualTo(text);
         return new TextInputPage(webDriver);
